@@ -194,7 +194,6 @@ Abstract: {p['abstract']}
 
 각 논문마다 아래 형식을 따라주세요:
 
-━━━━━━━━━━━━━━━━━━━━
 📄 *N. [논문 제목 영문]*
 🔗 [arXiv URL]
 🏢 *기관/저자* (가능하면 소속 기관 포함)
@@ -213,6 +212,7 @@ Abstract: {p['abstract']}
 - 반드시 한국어로 작성
 - 메소드 설명은 기술적으로 정확하게
 - Gemini Robotics, Physical Intelligence, NVIDIA, Yann LeCun, Chelsea Finn, Sergey Levine, Moo Jin Kim, Seonghyeon Ye 관련 논문이면 특별히 강조
+- 논문 사이에 구분선(━, ─, — 등)을 절대 사용하지 마세요. 빈 줄로만 구분하세요
 
 {papers_text}"""
 
