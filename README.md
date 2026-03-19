@@ -28,6 +28,65 @@ VLA, World Model, Physical AI 관련 논문을 매일 자동으로 검색하고 
 | 2026-03-19 | Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science | Emmanuel Dupoux, Yann LeCun, Jitendra Malik | [arXiv](https://arxiv.org/abs/2603.15381v1) |
 | 2026-03-19 | The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks | Shangwen Sun, Alfredo Canziani, Yann LeCun | [arXiv](https://arxiv.org/abs/2603.05498v1) |
 
+## 🦾 VLA 스터디 논문 목록
+
+> [awesome-vla-study](https://github.com/MilkClouds/awesome-vla-study) 기반 커리큘럼
+
+### Phase 2: Early Foundation RFMs & Robot Policy
+
+| # | 논문 | 링크 | 주제 |
+|---|------|------|------|
+| 1 | RT-1: Robotics Transformer — Brohan et al. (2022) | [2212.06817](https://arxiv.org/abs/2212.06817) | First large-scale Robotics Transformer |
+| 2 | RT-2: Vision-Language-Action Models — Brohan et al. (2023) | [2307.15818](https://arxiv.org/abs/2307.15818) | VLM backbone → VLA paradigm |
+| 3 | Octo — Ghosh et al. (2024) | [2405.12213](https://arxiv.org/abs/2405.12213) | Open-source generalist policy, OXE pretrained |
+| 4 | OpenVLA — Kim et al. (2024) | [2406.09246](https://arxiv.org/abs/2406.09246) | First open-source VLM-based VLA |
+| 5 | BeT — Shafiullah et al. (2022) | [2206.11251](https://arxiv.org/abs/2206.11251) | Multimodal action discretization |
+| 6 | Diffusion Policy — Chi et al. (2023) | [2303.04137](https://arxiv.org/abs/2303.04137) | Diffusion for robot control |
+| 7 | ACT/ALOHA — Zhao et al. (2023) | [2304.13705](https://arxiv.org/abs/2304.13705) | Action Chunking Transformer, bimanual |
+
+### Phase 3: Current RFM Architectures
+
+| # | 논문 | 링크 | 주제 |
+|---|------|------|------|
+| 8 | CogACT — Li et al. (2024) | [2411.19650](https://arxiv.org/abs/2411.19650) | VLM + DiT action head |
+| 9 | GR00T N1 — Bjorck et al. (2025) | [2503.14734](https://arxiv.org/abs/2503.14734) | 2B diffusion transformer, humanoid |
+| 10 | X-VLA — Zheng et al. (2025) | [2510.10274](https://arxiv.org/abs/2510.10274) | Cross-embodiment, flow matching |
+| 11 | π0 — Black et al. (2024) | [2410.24164](https://arxiv.org/abs/2410.24164) | Flow matching + action expert |
+| 12 | InternVLA-M1 — Chen et al. (2025) | [2510.13778](https://arxiv.org/abs/2510.13778) | Spatial grounding → action generation |
+
+### Phase 4: Data Scaling
+
+| # | 논문 | 링크 | 주제 |
+|---|------|------|------|
+| 13 | Open X-Embodiment (OXE) — (2023) | [2310.08864](https://arxiv.org/abs/2310.08864) | 1M+ trajectories, 22 embodiments |
+| 14 | AgiBot World — Bu et al. (2025) | [2503.06669](https://arxiv.org/abs/2503.06669) | 1M+ trajectories, 217 tasks |
+| 15 | UMI — Chi et al. (2024) | [2402.10329](https://arxiv.org/abs/2402.10329) | Robot-free SE(3) data collection |
+| 16 | VITRA — Li et al. (2025) | [2510.21571](https://arxiv.org/abs/2510.21571) | Human video → VLA training data |
+| 17 | Human to Robot Transfer — Kareer et al. (2025) | [2512.22414](https://arxiv.org/abs/2512.22414) | Human video → robot transfer |
+
+### Phase 5: Efficient Inference & Dual-System
+
+| # | 논문 | 링크 | 주제 |
+|---|------|------|------|
+| 18 | SmolVLA — Shukor et al. (2025) | [2506.01844](https://arxiv.org/abs/2506.01844) | 450M params, model compression |
+| 19 | RTC — Black et al. (2025) | [2506.07339](https://arxiv.org/abs/2506.07339) | Async inference, freezing + inpainting |
+| 20 | Helix — Figure AI (2025) | [figure.ai/news/helix](https://www.figure.ai/news/helix) | Dual-system humanoid |
+| 21 | Fast-in-Slow — Chen et al. (2025) | [2506.01953](https://arxiv.org/abs/2506.01953) | End-to-end trainable dual-system |
+
+### Phase 6: RL Fine-tuning, Reasoning & World Model
+
+| # | 논문 | 링크 | 주제 |
+|---|------|------|------|
+| 22 | HIL-SERL — Luo et al. (2024) | [2410.21845](https://arxiv.org/abs/2410.21845) | Human-in-the-loop RL |
+| 23 | SimpleVLA-RL — Li et al. (2025) | [2509.09674](https://arxiv.org/abs/2509.09674) | RL fine-tuning for AR VLA |
+| 24 | π*0.6 / Recap — PI (2025) | [2511.14759](https://arxiv.org/abs/2511.14759) | RL for flow-based VLA |
+| 25 | CoT-VLA — Zhao et al. (2025) | [2503.22020](https://arxiv.org/abs/2503.22020) | Visual chain-of-thought reasoning |
+| 26 | ThinkAct — Huang et al. (2025) | [2507.16815](https://arxiv.org/abs/2507.16815) | Decouple reasoning from execution |
+| 27 | Fast-ThinkAct — Huang et al. (2026) | [2601.09708](https://arxiv.org/abs/2601.09708) | Latent distillation, ~10x speed |
+| 28 | UniVLA — Wang et al. (2025) | [2506.19850](https://arxiv.org/abs/2506.19850) | Unified AR VLA with world modeling |
+| 29 | Cosmos Policy — Kim et al. (2026) | [2601.16163](https://arxiv.org/abs/2601.16163) | Video FM as robot policy backbone |
+| 30 | DreamZero — Ye et al. (2026) | [dreamzero0.github.io](https://dreamzero0.github.io/) | Joint world+action generation |
+
 ## 📚 브리핑 아카이브
 
 - [2026-03-19](./2026/03/2026-03-19.md)
