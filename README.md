@@ -13,10 +13,20 @@ VLA, World Model, Physical AI 관련 논문을 매일 자동으로 검색하고 
 
 ## 📊 최근 논문 (카테고리별)
 
+### VLA
+
+| 날짜 | 제목 | 저자 | 링크 |
+|------|------|------|------|
+| 2026-03-20 | ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation | Yang Li,  Zhaxizhuoma, Hongru Jiang | [arXiv](https://arxiv.org/abs/2603.15169) |
+| 2026-03-20 | ProbeFlow: Training-Free Adaptive Flow Matching for Vision-Language-Action Models | Zhou Fang, Jiaqi Wang, Yi Zhou | [arXiv](https://arxiv.org/abs/2603.17850) |
+| 2026-03-20 | HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awareness | Zihao Zheng, Zhihao Mao, Sicheng Tian | [arXiv](https://arxiv.org/abs/2603.17573) |
+| 2026-03-20 | KineVLA: Towards Kinematics-Aware Vision-Language-Action Models with Bi-Level Action Decomposition | Gaoge Han, Zhengqing Gao, Ziwen Li | [arXiv](https://arxiv.org/abs/2603.17524) |
+
 ### World Model
 
 | 날짜 | 제목 | 저자 | 링크 |
 |------|------|------|------|
+| 2026-03-20 | Kinema4D: Kinematic 4D World Modeling for Spatiotemporal Embodied Simulation | Mutian Xu, Tianbao Zhang, Tianqi Liu | [arXiv](https://arxiv.org/abs/2603.16669) |
 | 2026-03-19 | V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning | Lorenzo Mur-Labadia, Matthew Muckley, Amir Bar | [arXiv](https://arxiv.org/abs/2603.14482v2) |
 | 2026-03-19 | Representation Learning for Spatiotemporal Physical Systems | Helen Qu, Rudy Morel, Michael McCabe | [arXiv](https://arxiv.org/abs/2603.13227v1) |
 | 2026-03-19 | Temporal Straightening for Latent Planning | Ying Wang, Oumayma Bounou, Gaoyue Zhou | [arXiv](https://arxiv.org/abs/2603.12231v1) |
@@ -89,4 +99,5 @@ VLA, World Model, Physical AI 관련 논문을 매일 자동으로 검색하고 
 
 ## 📚 브리핑 아카이브
 
+- [2026-03-20](./2026/03/2026-03-20.md)
 - [2026-03-19](./2026/03/2026-03-19.md)
