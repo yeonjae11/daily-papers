@@ -357,8 +357,13 @@ def save_and_push(summary: str, papers: list[dict]):
         spaced_summary = summary.replace("\n📄", "\n\n📄")
         f.write(f"\n## 📝 상세 요약\n\n{spaced_summary}\n")
 
-    # Update papers DB
-    db = load_papers_db()
+    # Update papers DB (normalize keys to strip version suffixes)
+    raw_db = load_papers_db()
+    db = {}
+    for k, v in raw_db.items():
+        normalized_key = re.sub(r'v\d+$', '', k)
+        if normalized_key not in db or v["date"] < db[normalized_key]["date"]:
+            db[normalized_key] = v
     for p in papers:
         db[p["id"]] = {
             "title": p["title"],
