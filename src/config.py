@@ -41,6 +41,12 @@ TRACKS = [
             "Shenggan/awesome-distributed-ml",
             "PDZZXL/Awesome-LLM-Serving",
         ],
+        "conferences": [
+            {"dblp_venue": "conf/mlsys", "years": [2025, 2026]},
+            {"dblp_venue": "conf/asplos", "years": [2025, 2026]},
+            {"dblp_venue": "conf/micro", "years": [2025, 2026]},
+        ],
+        "ml_filter": True,
     },
     {
         "name": "LLM Post-training",
@@ -61,6 +67,7 @@ TRACKS = [
     },
     {
         "name": "RL for LLMs / Reasoning",
+        "min_yymm": 2501,
         "positive_keywords": [
             "rl for reasoning", "reasoning llm", "reasoning optimization",
             "length reward", "adaptive reasoning", "short cot",
@@ -94,6 +101,7 @@ TRACKS = [
     },
     {
         "name": "Efficient LLM / Inference / Long Context",
+        "min_yymm": 2501,
         "positive_keywords": [
             "efficient llm", "llm inference", "speculative decoding",
             "early exit", "token pruning", "layer skipping",
@@ -161,6 +169,16 @@ KEYWORD_MATCH_SCORE = 2.0
 ARXIV_CATEGORIES_MAIN = ["cs.CL", "cs.LG", "cs.AI"]
 ARXIV_CATEGORIES_SECONDARY = ["cs.MA", "cs.DC", "cs.SE"]
 ARXIV_CATEGORIES = ARXIV_CATEGORIES_MAIN + ARXIV_CATEGORIES_SECONDARY
+
+# ── ML Relevance Keywords (for filtering conference papers) ─────
+ML_RELEVANCE_KEYWORDS = [
+    "llm", "language model", "transformer", "neural", "deep learning",
+    "machine learning", "inference", "training", "gpu", "model serving",
+    "attention", "distributed training", "tensor", "batch",
+    "fine-tun", "pretrain", "embedding", "token", "accelerat",
+    "diffusion", "generative", "foundation model", "large model",
+    "kv cache", "speculative", "quantiz", "sparsity", "parallelism",
+]
 
 # ── Search Settings ──────────────────────────────────────────────
 FRESH_DAYS_BACK = 14

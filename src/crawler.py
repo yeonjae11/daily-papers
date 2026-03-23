@@ -4,7 +4,9 @@ import json
 import os
 import re
 import datetime
+import time
 import urllib.request
+import urllib.parse
 
 from src import config
 
@@ -42,13 +44,64 @@ def _extract_arxiv_ids(readme_text: str) -> list[str]:
     return unique
 
 
-def _is_year_2024_plus(arxiv_id: str) -> bool:
-    """Check if arXiv ID is from 2024 or later (prefix >= 24)."""
+def _is_after_cutoff(arxiv_id: str, min_yymm: int = 2406) -> bool:
+    """Check if arXiv ID is from after the cutoff (default: 2024 H2)."""
     try:
-        year_prefix = int(arxiv_id[:2])
-        return year_prefix >= 24
+        yymm = int(arxiv_id[:4])
+        return yymm >= min_yymm
     except (ValueError, IndexError):
         return False
+
+
+def _is_ml_relevant(title: str) -> bool:
+    """Check if a paper title is AI/ML relevant (not pure systems)."""
+    title_lower = title.lower()
+    return any(kw in title_lower for kw in config.ML_RELEVANCE_KEYWORDS)
+
+
+def _fetch_dblp_proceedings(dblp_venue: str, year: int) -> list[dict]:
+    """Fetch papers from DBLP conference proceedings.
+
+    Returns list of dicts with 'title' and 'arxiv_id' keys.
+    """
+    venue_key = dblp_venue.split("/")[-1]  # e.g., "mlsys" from "conf/mlsys"
+    toc_key = f"db/{dblp_venue}/{venue_key}{year}.bht:"
+    encoded_q = urllib.parse.quote(f"toc:{toc_key}")
+    url = f"https://dblp.org/search/publ/api?q={encoded_q}&h=1000&format=json"
+
+    headers = {"User-Agent": "DailyLLMBriefing/2.0"}
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        print(f"    [WARN] DBLP fetch failed for {venue_key} {year}: {e}")
+        return []
+
+    papers = []
+    hits = data.get("result", {}).get("hits", {}).get("hit", [])
+    for hit in hits:
+        info = hit.get("info", {})
+        title = info.get("title", "")
+        ee = info.get("ee", "")
+        # ee can be a string or list
+        if isinstance(ee, str):
+            ee = [ee]
+        elif not isinstance(ee, list):
+            ee = []
+
+        # Try to find arXiv ID from ee URLs
+        arxiv_id = None
+        for link in ee:
+            match = ARXIV_PATTERN.search(link)
+            if match:
+                arxiv_id = match.group(1)
+                break
+
+        if arxiv_id and title:
+            papers.append({"title": title, "arxiv_id": arxiv_id})
+
+    return papers
 
 
 def crawl_awesome_repos(tracks: list[dict] = None, token: str = None) -> dict:
@@ -76,6 +129,11 @@ def crawl_awesome_repos(tracks: list[dict] = None, token: str = None) -> dict:
 
         existing_ids = {p["arxiv_id"] for p in pool[track_name]}
 
+        min_yymm = track.get("min_yymm", 2406)
+        cutoff_label = f"{2000 + min_yymm // 100} {'H2' if min_yymm % 100 >= 6 else 'H1'}+"
+        if min_yymm % 100 == 1:
+            cutoff_label = f"{2000 + min_yymm // 100}+"
+
         for repo in track["awesome_repos"]:
             print(f"  Crawling {repo} for {track_name}...")
             readme = _fetch_readme(repo, token)
@@ -88,7 +146,7 @@ def crawl_awesome_repos(tracks: list[dict] = None, token: str = None) -> dict:
             for aid in arxiv_ids:
                 if aid in existing_ids:
                     continue
-                if not _is_year_2024_plus(aid):
+                if not _is_after_cutoff(aid, min_yymm):
                     continue
                 pool[track_name].append({
                     "arxiv_id": aid,
@@ -97,7 +155,31 @@ def crawl_awesome_repos(tracks: list[dict] = None, token: str = None) -> dict:
                 existing_ids.add(aid)
                 new_count += 1
 
-            print(f"    Found {len(arxiv_ids)} arXiv IDs, {new_count} new (2024+)")
+            print(f"    Found {len(arxiv_ids)} arXiv IDs, {new_count} new ({cutoff_label})")
+
+        # Crawl conference proceedings from DBLP (if configured)
+        for conf in track.get("conferences", []):
+            dblp_venue = conf["dblp_venue"]
+            venue_label = dblp_venue.split("/")[-1].upper()
+            for year in conf["years"]:
+                print(f"  Crawling {venue_label} {year} from DBLP for {track_name}...")
+                papers = _fetch_dblp_proceedings(dblp_venue, year)
+                new_count = 0
+                for paper in papers:
+                    aid = paper["arxiv_id"]
+                    if aid in existing_ids:
+                        continue
+                    if track.get("ml_filter") and not _is_ml_relevant(paper["title"]):
+                        continue
+                    pool[track_name].append({
+                        "arxiv_id": aid,
+                        "source_repo": f"dblp:{dblp_venue}/{year}",
+                    })
+                    existing_ids.add(aid)
+                    new_count += 1
+                ml_note = " ML-relevant" if track.get("ml_filter") else ""
+                print(f"    Found {len(papers)} papers, {new_count} new{ml_note}")
+                time.sleep(1)  # Respect DBLP rate limits
 
     pool["last_crawled"] = datetime.datetime.now().isoformat()
     return pool

@@ -28,6 +28,7 @@ def main():
     today = datetime.date.today()
     dry_run = "--dry-run" in sys.argv
     do_crawl = "--crawl" in sys.argv
+    no_git = "--no-git" in sys.argv
 
     log(f"=== Daily AI/LLM Paper Briefing ({today.isoformat()}) ===")
     if dry_run:
@@ -133,7 +134,10 @@ def main():
     archive_db.save()
 
     # Git commit & push
-    github_archive.git_commit_and_push(today, daily_path)
+    if no_git:
+        log("  Skipping git commit/push (--no-git)")
+    else:
+        github_archive.git_commit_and_push(today, daily_path)
 
     log("=== Done! ===")
 

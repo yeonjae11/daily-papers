@@ -1,6 +1,9 @@
-"""Slack DM delivery: header + per-paper analysis messages."""
+"""Slack DM delivery: header + per-paper analysis messages + Figure 1 images."""
 
+import os
+import tempfile
 import time
+import urllib.request
 
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
@@ -26,10 +29,48 @@ def _split_message(text: str, max_len: int = 3800) -> list[str]:
     return chunks
 
 
+def _upload_figure(client: WebClient, channel: str, image_url: str,
+                   paper_num: int, paper_title: str):
+    """Download Figure 1 from arXiv HTML and upload to Slack."""
+    headers = {"User-Agent": "DailyLLMBriefing/2.0"}
+    try:
+        req = urllib.request.Request(image_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            image_data = resp.read()
+            content_type = resp.headers.get("Content-Type", "")
+    except Exception as e:
+        print(f"  [WARN] Could not download Figure 1 for paper {paper_num}: {e}")
+        return
+
+    ext = ".png"
+    if "jpeg" in content_type or "jpg" in content_type:
+        ext = ".jpg"
+    elif "svg" in content_type:
+        ext = ".svg"
+
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix=ext, delete=False) as f:
+            f.write(image_data)
+            tmp_path = f.name
+
+        client.files_upload_v2(
+            channel=channel,
+            file=tmp_path,
+        )
+    except SlackApiError as e:
+        print(f"  [WARN] Could not upload Figure 1 for paper {paper_num}: {e}")
+    except Exception as e:
+        print(f"  [WARN] Figure 1 upload failed for paper {paper_num}: {e}")
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+
+
 def send_briefing(date_str: str, papers: list[dict], analyses: list[str]):
     """Send daily briefing to Slack DM.
 
-    Sends exactly 3 messages: 1 header + 2 paper analyses.
+    Sends: 1 header + per-paper (analysis message + Figure 1 image).
     """
     client = WebClient(token=config.SLACK_BOT_TOKEN)
 
@@ -38,8 +79,7 @@ def send_briefing(date_str: str, papers: list[dict], analyses: list[str]):
     for i, p in enumerate(papers, 1):
         track = p.get("track", "Other")
         title = p.get("title", p.get("id", "Unknown"))
-        source = "📡 Fresh" if p.get("source") == "arxiv_fresh" else "📚 Track"
-        lines.append(f"{i}. {title}\n   [{track}] {source}")
+        lines.append(f"{i}. {title}\n   [{track}]")
     header = "\n".join(lines)
 
     try:
@@ -47,7 +87,7 @@ def send_briefing(date_str: str, papers: list[dict], analyses: list[str]):
     except SlackApiError as e:
         print(f"  [ERROR] Slack header: {e}")
 
-    # Per-paper analysis messages
+    # Per-paper analysis messages + Figure 1
     for i, (paper, analysis) in enumerate(zip(papers, analyses)):
         if not analysis:
             error_msg = f"⚠️ Paper {i+1} ({paper.get('title', paper['id'])}): 분석 생성 실패"
@@ -70,3 +110,10 @@ def send_briefing(date_str: str, papers: list[dict], analyses: list[str]):
                 time.sleep(1)
             except SlackApiError as e:
                 print(f"  [ERROR] Slack paper {i+1}: {e}")
+
+        # Upload Figure 1 if available
+        figure1_url = paper.get("figure1_url")
+        if figure1_url:
+            time.sleep(2)  # Ensure message ordering before file upload
+            _upload_figure(client, config.SLACK_CHANNEL, figure1_url, i + 1, title)
+            time.sleep(5)

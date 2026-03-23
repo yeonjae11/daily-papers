@@ -64,10 +64,10 @@ pip install -r requirements.txt
 3. **OAuth & Permissions** 메뉴로 이동
 4. **Bot Token Scopes**에 아래 권한 추가:
    - `chat:write` — 메시지 전송
-   - `im:write` — DM 전송
+   - `files:write` — Figure 이미지 업로드
 5. 상단 **Install to Workspace** 클릭 → **Bot User OAuth Token** 복사 (`xoxb-...`)
-6. 본인 Slack **Member ID** 확인:
-   - Slack에서 본인 프로필 클릭 → 점 세 개 (⋯) → **Copy member ID** (예: `U0XXXXXXXX`)
+6. 전송할 Slack **채널 ID** 확인:
+   - 채널 링크의 `/archives/C...` 부분 (예: `C0ANP5PD95X`)
 
 ### 4. Claude 분석 모드 선택
 
@@ -91,7 +91,7 @@ cp .env.example .env
 
 ```env
 SLACK_BOT_TOKEN=xoxb-여기에-봇-토큰-붙여넣기
-SLACK_CHANNEL=U여기에-본인-멤버-ID
+SLACK_CHANNEL=C여기에-채널-ID
 ANTHROPIC_API_KEY=                       # 비워두면 Claude CLI 사용 (Pro Max)
 GITHUB_TOKEN=ghp_여기에-깃헙-토큰       # 선택사항 (rate limit 완화)
 ```
@@ -99,7 +99,7 @@ GITHUB_TOKEN=ghp_여기에-깃헙-토큰       # 선택사항 (rate limit 완화
 | 변수 | 필수 | 설명 |
 |------|------|------|
 | `SLACK_BOT_TOKEN` | O | Slack Bot OAuth Token |
-| `SLACK_CHANNEL` | O | DM 받을 User의 Member ID |
+| `SLACK_CHANNEL` | O | 채널 ID (`C...`) → 채널 전송, 본인 Member ID (`U...`) → DM 전송 |
 | `ANTHROPIC_API_KEY` | △ | Anthropic API Key. 비워두면 Claude CLI 사용 (Pro/Pro Max 구독 필요) |
 | `GITHUB_TOKEN` | X | GitHub Personal Access Token (크롤링 rate limit 완화) |
 
@@ -109,16 +109,17 @@ GITHUB_TOKEN=ghp_여기에-깃헙-토큰       # 선택사항 (rate limit 완화
 source .venv/bin/activate
 
 # 1) Track Pool 구축 (Awesome repo 크롤링) + 테스트 실행
-source .env && python3 daily_briefing.py --crawl --dry-run
+set -a && source .env && set +a && python3 daily_briefing.py --crawl --dry-run
 
 # 2) 결과 확인 후 실제 실행 (Slack 전송 + Git push)
-source .env && python3 daily_briefing.py
+set -a && source .env && set +a && python3 daily_briefing.py
 ```
 
 | 플래그 | 설명 |
 |--------|------|
 | `--crawl` | Awesome repo 강제 크롤링 (보통 7일마다 자동 실행) |
 | `--dry-run` | Slack 전송 / Git push 없이 분석 결과만 stdout 출력 |
+| `--no-git` | Slack 전송 + 파일 저장만 하고 git commit/push 건너뛰기 |
 | (없음) | 정상 실행 |
 
 ### 7. Crontab 등록 (자동 실행)
