@@ -42,16 +42,18 @@ AUTHOR_QUERIES = [
     'au:"Sergey Levine"',
     'au:"Moo Jin Kim"',
     'au:"Seonghyeon Ye"',
+    'au:"Fei-Fei Li"',
 ]
 
 PRIORITY_ORGS = [
     "google", "deepmind", "gemini", "physical intelligence",
     "nvidia", "meta", "berkeley", "stanford",
+    "world labs", "advanced machine intelligence",
 ]
 
 PRIORITY_AUTHORS = [
     "yann lecun", "chelsea finn", "sergey levine",
-    "moo jin kim", "seonghyeon ye",
+    "moo jin kim", "seonghyeon ye", "fei-fei li",
 ]
 
 CATEGORIES = ["cs.RO", "cs.AI", "cs.CV", "cs.LG"]
@@ -271,7 +273,7 @@ Abstract: {p['abstract']}
 주의사항:
 - 반드시 한국어로 작성
 - 메소드 설명은 기술적으로 정확하게
-- Gemini Robotics, Physical Intelligence, NVIDIA, Yann LeCun, Chelsea Finn, Sergey Levine, Moo Jin Kim, Seonghyeon Ye 관련 논문이면 특별히 강조
+- Gemini Robotics, Physical Intelligence, NVIDIA, World Labs, AMI, Yann LeCun, Chelsea Finn, Sergey Levine, Fei-Fei Li, Moo Jin Kim, Seonghyeon Ye 관련 논문이면 특별히 강조
 - 논문 사이에 구분선(━, ─, — 등)을 절대 사용하지 마세요. 빈 줄로만 구분하세요
 
 {papers_text}"""

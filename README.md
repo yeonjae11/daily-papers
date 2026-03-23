@@ -8,8 +8,8 @@ VLA, World Model, Physical AI 관련 논문을 매일 자동으로 검색하고 
 - Physical AI / Embodied AI
 
 ## 🏢 주요 추적 기관/저자
-- **기관**: Gemini Robotics, Physical Intelligence, NVIDIA
-- **저자**: Yann LeCun, Chelsea Finn, Sergey Levine, Moo Jin Kim, Seonghyeon Ye
+- **기관**: Gemini Robotics, Physical Intelligence, NVIDIA, World Labs, AMI (Advanced Machine Intelligence Labs)
+- **저자**: Yann LeCun, Chelsea Finn, Sergey Levine, Fei-Fei Li, Moo Jin Kim, Seonghyeon Ye
 
 ## 📊 최근 논문 (카테고리별)
 
