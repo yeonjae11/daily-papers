@@ -20,9 +20,10 @@ OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance,
 
 - **매일 2편**: Fresh arXiv 1편 (14일 이내) + Track Pool 1편 (round-robin)
 - **분석 형식**: Problem / Background / Methodology / Evaluation / Key Intuition
-- **Slack DM**: KST 08:00 자동 전송
+- **Slack 전송**: KST 08:00 자동 전송 (채널 또는 DM)
 - **중복 방지**: 2-layer dedup (fresh_db + archive_db)
-- **Track Pool**: 20개 Awesome repo에서 자동 크롤링 (2024년 이후 논문)
+- **Track Pool**: 20개 Awesome repo + DBLP 컨퍼런스(MLSys/ASPLOS/MICRO)에서 자동 크롤링
+- **분석 소스**: arXiv HTML 본문 전체 + Figure 1 이미지 추출
 
 ---
 
@@ -124,7 +125,7 @@ set -a && source .env && set +a && python3 daily_briefing.py
 
 ### 7. Crontab 등록 (자동 실행)
 
-매일 **KST 08:00** (= **UTC 23:00**)에 자동 실행:
+매일 **KST 08:00**에 자동 실행 (서버 타임존이 KST인 경우):
 
 ```bash
 crontab -e
@@ -192,7 +193,7 @@ daily-ai-llm-papers/
 │   ├── dedup.py           #   2-layer 중복 방지
 │   ├── selector.py        #   일일 논문 선정 (1 fresh + 1 track)
 │   ├── analyzer.py        #   Claude 5항목 깊이 분석
-│   ├── slack_sender.py    #   Slack DM 전송
+│   ├── slack_sender.py    #   Slack 전송 (채널/DM + Figure 업로드)
 │   └── github_archive.py  #   마크다운 저장 + README + Git push
 ├── tests/                 # 유닛 테스트
 │   ├── test_scoring.py    #   스코어링 테스트
