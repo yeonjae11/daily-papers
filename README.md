@@ -1,117 +1,212 @@
-# 🤖 Daily AI/Robotics Paper Briefing
+# 🤖 Daily AI/LLM Paper Briefing
 
-VLA, World Model, Physical AI 관련 논문을 매일 자동으로 검색하고 한국어로 요약합니다.
+AI/LLM 관련 논문을 매일 자동으로 검색하고 한국어로 깊이 있게 분석합니다.
 
-## 📅 주요 검색 키워드
-- Vision-Language-Action (VLA)
-- World Model for Robotics
-- Physical AI / Embodied AI
+## 🎯 트랙 구조
 
-## 🏢 주요 추적 기관/저자
-- **기관**: Gemini Robotics, Physical Intelligence, NVIDIA, World Labs, AMI (Advanced Machine Intelligence Labs)
-- **저자**: Yann LeCun, Chelsea Finn, Sergey Levine, Fei-Fei Li, Moo Jin Kim, Seonghyeon Ye
+| Track | 이름 | 범위 |
+|-------|------|------|
+| 1 | ML Systems | training/serving systems, scheduling, parallelism, goodput, runtime |
+| 2 | LLM Post-training | instruction tuning, RLHF, DPO/GRPO, reward modeling, alignment |
+| 3 | RL for LLMs / Reasoning | reasoning RL, process reward, CoT efficiency, adaptive compute |
+| 4 | Agents | tool use, multi-agent, planning, browser/computer-use, evaluation |
+| 5 | Efficient LLM / Inference / Long Context | speculative decoding, KV cache, quantization, long context, sparsity |
 
-## 📊 최근 논문 (카테고리별)
+## 🏢 모니터링 기관 (가중치 부여)
 
-### VLA
+OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance, Microsoft, DeepSeek, Alibaba, Tencent, UC Berkeley, Stanford, MIT, CMU
 
-| 날짜 | 제목 | 저자 | 링크 |
-|------|------|------|------|
-| 2026-03-21 | From Inference Efficiency to Embodied Efficiency: Revisiting Efficiency Metrics for Vision-Language-Action Models | Zhuofan Li, Hongkun Yang, Zhenyang Chen | [arXiv](https://arxiv.org/abs/2603.19131) |
-| 2026-03-21 | Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models | Bryce Grant, Xijia Zhao, Peng Wang | [arXiv](https://arxiv.org/abs/2603.19233) |
-| 2026-03-20 | ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation | Yang Li,  Zhaxizhuoma, Hongru Jiang | [arXiv](https://arxiv.org/abs/2603.15169) |
-| 2026-03-20 | ProbeFlow: Training-Free Adaptive Flow Matching for Vision-Language-Action Models | Zhou Fang, Jiaqi Wang, Yi Zhou | [arXiv](https://arxiv.org/abs/2603.17850) |
-| 2026-03-20 | HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awareness | Zihao Zheng, Zhihao Mao, Sicheng Tian | [arXiv](https://arxiv.org/abs/2603.17573) |
-| 2026-03-20 | KineVLA: Towards Kinematics-Aware Vision-Language-Action Models with Bi-Level Action Decomposition | Gaoge Han, Zhengqing Gao, Ziwen Li | [arXiv](https://arxiv.org/abs/2603.17524) |
+## ⚙️ 운영 방식
 
-### World Model
+- **매일 2편**: Fresh arXiv 1편 (14일 이내) + Track Pool 1편 (round-robin)
+- **분석 형식**: Problem / Background / Methodology / Evaluation / Key Intuition
+- **Slack DM**: KST 08:00 자동 전송
+- **중복 방지**: 2-layer dedup (fresh_db + archive_db)
+- **Track Pool**: 20개 Awesome repo에서 자동 크롤링 (2024년 이후 논문)
 
-| 날짜 | 제목 | 저자 | 링크 |
-|------|------|------|------|
-| 2026-03-21 | OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation | Yuhang Zheng, Songen Gu, Weize Li | [arXiv](https://arxiv.org/abs/2603.19201) |
-| 2026-03-20 | Kinema4D: Kinematic 4D World Modeling for Spatiotemporal Embodied Simulation | Mutian Xu, Tianbao Zhang, Tianqi Liu | [arXiv](https://arxiv.org/abs/2603.16669) |
-| 2026-03-19 | V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning | Lorenzo Mur-Labadia, Matthew Muckley, Amir Bar | [arXiv](https://arxiv.org/abs/2603.14482) |
-| 2026-03-19 | Representation Learning for Spatiotemporal Physical Systems | Helen Qu, Rudy Morel, Michael McCabe | [arXiv](https://arxiv.org/abs/2603.13227) |
-| 2026-03-19 | Temporal Straightening for Latent Planning | Ying Wang, Oumayma Bounou, Gaoyue Zhou | [arXiv](https://arxiv.org/abs/2603.12231) |
+---
 
-### Physical AI
+## 🚀 설치 및 설정
 
-| 날짜 | 제목 | 저자 | 링크 |
-|------|------|------|------|
-| 2026-03-23 | The Era of End-to-End Autonomy: Transitioning from Rule-Based Driving to Large Driving Models | Eduardo Nebot, Julie Stephany Berrio Perez | [arXiv](https://arxiv.org/abs/2603.16050) |
+### 1. 레포 클론
 
-### Other
+```bash
+git clone https://github.com/minseo25/daily-ai-llm-papers.git
+cd daily-ai-llm-papers
+```
 
-| 날짜 | 제목 | 저자 | 링크 |
-|------|------|------|------|
-| 2026-03-21 | MERGE: Guided Vision-Language Models for Multi-Actor Event Reasoning and Grounding in Human-Robot Interaction | Joerg Deigmoeller, Nakul Agarwal, Stephan Hasler | [arXiv](https://arxiv.org/abs/2603.18988) |
-| 2026-03-21 | NavTrust: Benchmarking Trustworthiness for Embodied Navigation | Huaide Jiang, Yash Chaudhary, Yuping Wang | [arXiv](https://arxiv.org/abs/2603.19229) |
-| 2026-03-19 | Why AI systems don't learn and what to do about it: Lessons on autonomous learning from cognitive science | Emmanuel Dupoux, Yann LeCun, Jitendra Malik | [arXiv](https://arxiv.org/abs/2603.15381) |
-| 2026-03-19 | The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks | Shangwen Sun, Alfredo Canziani, Yann LeCun | [arXiv](https://arxiv.org/abs/2603.05498) |
+### 2. uv 환경 설정
 
-## 🦾 VLA 스터디 논문 목록
+[uv](https://docs.astral.sh/uv/)를 사용하는 경우:
 
-> [awesome-vla-study](https://github.com/MilkClouds/awesome-vla-study) 기반 커리큘럼
+```bash
+# uv 설치 (없는 경우)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-### Phase 2: Early Foundation RFMs & Robot Policy
+# 가상환경 생성 + 의존성 설치
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+```
 
-| # | 논문 | 링크 | 주제 |
-|---|------|------|------|
-| 1 | RT-1: Robotics Transformer — Brohan et al. (2022) | [2212.06817](https://arxiv.org/abs/2212.06817) | First large-scale Robotics Transformer |
-| 2 | RT-2: Vision-Language-Action Models — Brohan et al. (2023) | [2307.15818](https://arxiv.org/abs/2307.15818) | VLM backbone → VLA paradigm |
-| 3 | Octo — Ghosh et al. (2024) | [2405.12213](https://arxiv.org/abs/2405.12213) | Open-source generalist policy, OXE pretrained |
-| 4 | OpenVLA — Kim et al. (2024) | [2406.09246](https://arxiv.org/abs/2406.09246) | First open-source VLM-based VLA |
-| 5 | BeT — Shafiullah et al. (2022) | [2206.11251](https://arxiv.org/abs/2206.11251) | Multimodal action discretization |
-| 6 | Diffusion Policy — Chi et al. (2023) | [2303.04137](https://arxiv.org/abs/2303.04137) | Diffusion for robot control |
-| 7 | ACT/ALOHA — Zhao et al. (2023) | [2304.13705](https://arxiv.org/abs/2304.13705) | Action Chunking Transformer, bimanual |
+기존 pip을 사용하는 경우:
 
-### Phase 3: Current RFM Architectures
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-| # | 논문 | 링크 | 주제 |
-|---|------|------|------|
-| 8 | CogACT — Li et al. (2024) | [2411.19650](https://arxiv.org/abs/2411.19650) | VLM + DiT action head |
-| 9 | GR00T N1 — Bjorck et al. (2025) | [2503.14734](https://arxiv.org/abs/2503.14734) | 2B diffusion transformer, humanoid |
-| 10 | X-VLA — Zheng et al. (2025) | [2510.10274](https://arxiv.org/abs/2510.10274) | Cross-embodiment, flow matching |
-| 11 | π0 — Black et al. (2024) | [2410.24164](https://arxiv.org/abs/2410.24164) | Flow matching + action expert |
-| 12 | InternVLA-M1 — Chen et al. (2025) | [2510.13778](https://arxiv.org/abs/2510.13778) | Spatial grounding → action generation |
+### 3. Slack Bot 연결
 
-### Phase 4: Data Scaling
+1. https://api.slack.com/apps 접속 → **Create New App** → **From scratch**
+2. App 이름 지정 (예: `Daily Papers Bot`), Workspace 선택
+3. **OAuth & Permissions** 메뉴로 이동
+4. **Bot Token Scopes**에 아래 권한 추가:
+   - `chat:write` — 메시지 전송
+   - `im:write` — DM 전송
+5. 상단 **Install to Workspace** 클릭 → **Bot User OAuth Token** 복사 (`xoxb-...`)
+6. 본인 Slack **Member ID** 확인:
+   - Slack에서 본인 프로필 클릭 → 점 세 개 (⋯) → **Copy member ID** (예: `U0XXXXXXXX`)
 
-| # | 논문 | 링크 | 주제 |
-|---|------|------|------|
-| 13 | Open X-Embodiment (OXE) — (2023) | [2310.08864](https://arxiv.org/abs/2310.08864) | 1M+ trajectories, 22 embodiments |
-| 14 | AgiBot World — Bu et al. (2025) | [2503.06669](https://arxiv.org/abs/2503.06669) | 1M+ trajectories, 217 tasks |
-| 15 | UMI — Chi et al. (2024) | [2402.10329](https://arxiv.org/abs/2402.10329) | Robot-free SE(3) data collection |
-| 16 | VITRA — Li et al. (2025) | [2510.21571](https://arxiv.org/abs/2510.21571) | Human video → VLA training data |
-| 17 | Human to Robot Transfer — Kareer et al. (2025) | [2512.22414](https://arxiv.org/abs/2512.22414) | Human video → robot transfer |
+### 4. Claude 분석 모드 선택
 
-### Phase 5: Efficient Inference & Dual-System
+논문 분석에 Claude를 사용합니다. **두 가지 모드** 중 하나를 선택하세요:
 
-| # | 논문 | 링크 | 주제 |
-|---|------|------|------|
-| 18 | SmolVLA — Shukor et al. (2025) | [2506.01844](https://arxiv.org/abs/2506.01844) | 450M params, model compression |
-| 19 | RTC — Black et al. (2025) | [2506.07339](https://arxiv.org/abs/2506.07339) | Async inference, freezing + inpainting |
-| 20 | Helix — Figure AI (2025) | [figure.ai/news/helix](https://www.figure.ai/news/helix) | Dual-system humanoid |
-| 21 | Fast-in-Slow — Chen et al. (2025) | [2506.01953](https://arxiv.org/abs/2506.01953) | End-to-end trainable dual-system |
+| 모드 | 대상 | 설정 방법 | 비용 |
+|------|------|-----------|------|
+| **Claude Code CLI** | Pro / Pro Max 구독자 | `ANTHROPIC_API_KEY`를 비워두기 | 월정액에 포함 |
+| **Anthropic API** | API 사용자 | `ANTHROPIC_API_KEY` 설정 | 토큰당 과금 (~$0.03/일) |
 
-### Phase 6: RL Fine-tuning, Reasoning & World Model
+- **Pro Max 구독자**: `ANTHROPIC_API_KEY`를 비워두면 자동으로 `claude` CLI를 사용합니다. Claude Code가 설치되어 있어야 합니다.
+- **API 사용자**: https://console.anthropic.com 에서 API key를 발급받아 설정하세요.
 
-| # | 논문 | 링크 | 주제 |
-|---|------|------|------|
-| 22 | HIL-SERL — Luo et al. (2024) | [2410.21845](https://arxiv.org/abs/2410.21845) | Human-in-the-loop RL |
-| 23 | SimpleVLA-RL — Li et al. (2025) | [2509.09674](https://arxiv.org/abs/2509.09674) | RL fine-tuning for AR VLA |
-| 24 | π*0.6 / Recap — PI (2025) | [2511.14759](https://arxiv.org/abs/2511.14759) | RL for flow-based VLA |
-| 25 | CoT-VLA — Zhao et al. (2025) | [2503.22020](https://arxiv.org/abs/2503.22020) | Visual chain-of-thought reasoning |
-| 26 | ThinkAct — Huang et al. (2025) | [2507.16815](https://arxiv.org/abs/2507.16815) | Decouple reasoning from execution |
-| 27 | Fast-ThinkAct — Huang et al. (2026) | [2601.09708](https://arxiv.org/abs/2601.09708) | Latent distillation, ~10x speed |
-| 28 | UniVLA — Wang et al. (2025) | [2506.19850](https://arxiv.org/abs/2506.19850) | Unified AR VLA with world modeling |
-| 29 | Cosmos Policy — Kim et al. (2026) | [2601.16163](https://arxiv.org/abs/2601.16163) | Video FM as robot policy backbone |
-| 30 | DreamZero — Ye et al. (2026) | [dreamzero0.github.io](https://dreamzero0.github.io/) | Joint world+action generation |
+### 5. 환경 변수 설정
+
+```bash
+cp .env.example .env
+```
+
+`.env` 파일을 열고 아래 값을 채워주세요:
+
+```env
+SLACK_BOT_TOKEN=xoxb-여기에-봇-토큰-붙여넣기
+SLACK_CHANNEL=U여기에-본인-멤버-ID
+ANTHROPIC_API_KEY=                       # 비워두면 Claude CLI 사용 (Pro Max)
+GITHUB_TOKEN=ghp_여기에-깃헙-토큰       # 선택사항 (rate limit 완화)
+```
+
+| 변수 | 필수 | 설명 |
+|------|------|------|
+| `SLACK_BOT_TOKEN` | O | Slack Bot OAuth Token |
+| `SLACK_CHANNEL` | O | DM 받을 User의 Member ID |
+| `ANTHROPIC_API_KEY` | △ | Anthropic API Key. 비워두면 Claude CLI 사용 (Pro/Pro Max 구독 필요) |
+| `GITHUB_TOKEN` | X | GitHub Personal Access Token (크롤링 rate limit 완화) |
+
+### 6. 첫 실행
+
+```bash
+source .venv/bin/activate
+
+# 1) Track Pool 구축 (Awesome repo 크롤링) + 테스트 실행
+source .env && python3 daily_briefing.py --crawl --dry-run
+
+# 2) 결과 확인 후 실제 실행 (Slack 전송 + Git push)
+source .env && python3 daily_briefing.py
+```
+
+| 플래그 | 설명 |
+|--------|------|
+| `--crawl` | Awesome repo 강제 크롤링 (보통 7일마다 자동 실행) |
+| `--dry-run` | Slack 전송 / Git push 없이 분석 결과만 stdout 출력 |
+| (없음) | 정상 실행 |
+
+### 7. Crontab 등록 (자동 실행)
+
+매일 **KST 08:00** (= **UTC 23:00**)에 자동 실행:
+
+```bash
+crontab -e
+```
+
+아래 줄 추가 (경로를 본인 환경에 맞게 수정):
+
+```cron
+0 23 * * * cd /Users/yourname/daily-ai-llm-papers && bash run.sh >> logs/briefing.log 2>&1
+```
+
+macOS에서 cron이 안 되는 경우 **launchd** 사용:
+
+```bash
+# ~/Library/LaunchAgents/com.daily-papers.plist 생성
+cat > ~/Library/LaunchAgents/com.daily-papers.plist << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.daily-papers</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/yourname/daily-ai-llm-papers/run.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>WorkingDirectory</key>
+    <string>/Users/yourname/daily-ai-llm-papers</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>
+EOF
+
+# 등록
+launchctl load ~/Library/LaunchAgents/com.daily-papers.plist
+```
+
+---
+
+## 📁 프로젝트 구조
+
+```
+daily-ai-llm-papers/
+├── daily_briefing.py      # 메인 오케스트레이터
+├── run.sh                 # Cron 실행 스크립트
+├── requirements.txt       # Python 의존성
+├── .env.example           # 환경 변수 템플릿
+├── src/                   # 핵심 모듈
+│   ├── config.py          #   트랙/키워드/기관 설정
+│   ├── arxiv_search.py    #   arXiv API 검색
+│   ├── scoring.py         #   논문 점수 산정
+│   ├── crawler.py         #   Awesome repo 크롤러
+│   ├── dedup.py           #   2-layer 중복 방지
+│   ├── selector.py        #   일일 논문 선정 (1 fresh + 1 track)
+│   ├── analyzer.py        #   Claude 5항목 깊이 분석
+│   ├── slack_sender.py    #   Slack DM 전송
+│   └── github_archive.py  #   마크다운 저장 + README + Git push
+├── tests/                 # 유닛 테스트
+│   ├── test_scoring.py    #   스코어링 테스트
+│   └── test_selector.py   #   선정 로직 테스트
+├── papers_db/             # 데이터
+│   ├── fresh_db.json      #   30일 rolling dedup DB
+│   ├── archive_db.json    #   영구 dedup DB
+│   └── track_pool.json    #   Awesome repo 논문 풀
+└── YYYY/MM/YYYY-MM-DD.md  # 일일 브리핑 아카이브
+```
+
+## 📊 최근 논문 (트랙별)
+
+_아직 새 시스템으로 수집된 논문이 없습니다. 첫 실행 후 자동으로 채워집니다._
 
 ## 📚 브리핑 아카이브
 
 - [2026-03-23](./2026/03/2026-03-23.md)
-- [2026-03-22](./2026/03/2026-03-22.md)
-- [2026-03-21](./2026/03/2026-03-21.md)
-- [2026-03-20](./2026/03/2026-03-20.md)
-- [2026-03-19](./2026/03/2026-03-19.md)

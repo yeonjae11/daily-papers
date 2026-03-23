@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 logs/
+.omc
+.claude
+papers_db.json.bak
