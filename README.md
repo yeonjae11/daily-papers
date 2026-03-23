@@ -133,7 +133,7 @@ crontab -e
 아래 줄 추가 (경로를 본인 환경에 맞게 수정):
 
 ```cron
-0 23 * * * cd /Users/yourname/daily-ai-llm-papers && bash run.sh >> logs/briefing.log 2>&1
+0 8 * * * cd /home/minseokim/daily-ai-llm-papers && bash run.sh
 ```
 
 macOS에서 cron이 안 되는 경우 **launchd** 사용:
