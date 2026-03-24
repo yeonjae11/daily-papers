@@ -18,5 +18,19 @@
     "org": "tencent",
     "score": 46.0,
     "date": "2026-03-24"
+  },
+  "2603.22117": {
+    "title": "On the Direction of RLVR Updates for LLM Reasoning: Identification and Exploitation",
+    "track": "RL for LLMs / Reasoning",
+    "org": "alibaba",
+    "score": 31.0,
+    "date": "2026-03-24"
+  },
+  "2603.21383": {
+    "title": "PivotRL: High Accuracy Agentic Post-Training at Low Compute Cost",
+    "track": "LLM Post-training",
+    "org": "nvidia",
+    "score": 27.0,
+    "date": "2026-03-24"
   }
 }
