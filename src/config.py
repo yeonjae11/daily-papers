@@ -127,11 +127,11 @@ TRACKS = [
         "positive_keywords": [
             "diffusion language model", "discrete diffusion",
             "masked diffusion", "continuous diffusion language",
-            "flow matching language", "score-based language",
-            "non-autoregressive generation", "parallel decoding diffusion",
-            "denoising language model", "diffusion transformer text",
-            "text diffusion", "language diffusion",
-            "efficient diffusion llm", "diffusion lm",
+            "non-autoregressive generation", "non-autoregressive language",
+            "efficient dllm", "efficient diffusion llm",
+            "denoising language model", "text diffusion",
+            "language diffusion", "diffusion lm",
+            "mdlm", "sedd", "dream", "mercury",
         ],
         "awesome_repos": [
             "FelixMessi/Awesome-Efficient-dLLMs",
