@@ -98,6 +98,9 @@ def main():
         analyses.append(analysis)
         if analysis:
             log(f"  Paper {i} analysis: {len(analysis)} chars")
+            # Update archive_db title if it was a pool paper with placeholder title
+            if paper.get("source") == "track_pool" and archive_db.contains(paper["id"]):
+                archive_db.data[paper["id"]]["title"] = paper.get("title", paper["id"])
         else:
             log(f"  [WARN] Paper {i} analysis failed")
 

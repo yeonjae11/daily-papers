@@ -7,6 +7,9 @@ import subprocess
 from src import config
 from src.dedup import ArchiveDB
 
+# Root of the git repo (one level up from src/)
+ROOT_DIR = os.path.dirname(config.REPO_DIR)
+
 
 def md_escape(s: str) -> str:
     """Escape pipe characters for Markdown table cells."""
@@ -57,15 +60,27 @@ def save_daily_markdown(
 
 
 def rebuild_readme(archive_db: ArchiveDB):
-    """Rebuild README.md with 5-track structure."""
-    readme_path = os.path.join(config.REPO_DIR, "README.md")
+    """Update root README.md: preserve static content above marker, regenerate below."""
+    readme_path = os.path.join(ROOT_DIR, "README.md")
+    marker = "<!-- AUTO-GENERATED BELOW -->"
 
-    # Collect archive entries from existing daily files
+    # Read existing README and keep everything above the marker
+    static_part = ""
+    if os.path.exists(readme_path):
+        with open(readme_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        if marker in content:
+            static_part = content[:content.index(marker)]
+        else:
+            static_part = content.rstrip() + "\n\n"
+
+    # Collect archive entries from daily files (under src/YYYY/MM/)
     archive_entries = []
     for root, dirs, files in os.walk(config.REPO_DIR):
         for fname in files:
             if fname.endswith(".md") and fname[:4].isdigit() and len(fname) == 13:
-                rel = os.path.relpath(os.path.join(root, fname), config.REPO_DIR)
+                # Path relative to repo root (e.g., src/2026/03/2026-03-24.md)
+                rel = os.path.relpath(os.path.join(root, fname), ROOT_DIR)
                 date_str = fname.replace(".md", "")
                 archive_entries.append((date_str, rel))
     archive_entries.sort(key=lambda x: x[0], reverse=True)
@@ -78,36 +93,10 @@ def rebuild_readme(archive_db: ArchiveDB):
             categorized[track] = []
         categorized[track].append({"id": pid, **info})
 
+    # Write: static part + marker + auto-generated part
     with open(readme_path, "w", encoding="utf-8") as f:
-        f.write("# 🤖 Daily AI/LLM Paper Briefing\n\n")
-        f.write("AI/LLM 관련 논문을 매일 자동으로 검색하고 한국어로 깊이 있게 분석합니다.\n\n")
-
-        # Track descriptions
-        f.write("## 🎯 트랙 구조\n\n")
-        f.write("| Track | 이름 | 범위 |\n")
-        f.write("|-------|------|------|\n")
-        track_scopes = [
-            "training/serving systems, scheduling, parallelism, goodput, runtime",
-            "instruction tuning, RLHF, DPO/GRPO, reward modeling, alignment",
-            "reasoning RL, process reward, CoT efficiency, adaptive compute",
-            "tool use, multi-agent, planning, browser/computer-use, evaluation",
-            "speculative decoding, KV cache, quantization, long context, sparsity",
-        ]
-        for i, track in enumerate(config.TRACKS):
-            f.write(f"| {i+1} | {track['name']} | {track_scopes[i]} |\n")
-        f.write("\n")
-
-        # Monitoring orgs
-        f.write("## 🏢 모니터링 기관 (가중치 부여)\n\n")
-        f.write("OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance, ")
-        f.write("Microsoft, DeepSeek, Alibaba, Tencent, UC Berkeley, Stanford, MIT, CMU\n\n")
-
-        # How it works
-        f.write("## ⚙️ 운영 방식\n\n")
-        f.write("- **매일 2편**: Fresh arXiv 1편 (14일 이내) + Track Pool 1편 (round-robin)\n")
-        f.write("- **분석 형식**: Problem / Background / Methodology / Evaluation / Key Intuition\n")
-        f.write("- **Slack DM**: KST 08:00 자동 전송\n")
-        f.write("- **중복 방지**: 2-layer dedup (fresh_db + archive_db)\n\n")
+        f.write(static_part)
+        f.write(marker + "\n\n")
 
         # Recent papers by track
         f.write("## 📊 최근 논문 (트랙별)\n\n")
@@ -130,23 +119,24 @@ def rebuild_readme(archive_db: ArchiveDB):
         f.write("## 📚 브리핑 아카이브\n\n")
         for date_str, rel_path in archive_entries:
             f.write(f"- [{date_str}](./{rel_path})\n")
-        f.write("")
 
 
 def git_commit_and_push(date: datetime.date, daily_md_path: str):
     """Git add specific files, commit, and push."""
-    os.chdir(config.REPO_DIR)
+    os.chdir(ROOT_DIR)
 
+    # Paths relative to repo root
+    daily_rel = os.path.relpath(daily_md_path, ROOT_DIR)
     files_to_add = [
-        daily_md_path,
-        "papers_db/fresh_db.json",
-        "papers_db/archive_db.json",
-        "papers_db/track_pool.json",
+        daily_rel,
+        "src/papers_db/fresh_db.json",
+        "src/papers_db/archive_db.json",
+        "src/papers_db/track_pool.json",
         "README.md",
     ]
 
     for f in files_to_add:
-        if os.path.exists(os.path.join(config.REPO_DIR, f)):
+        if os.path.exists(os.path.join(ROOT_DIR, f)):
             subprocess.run(["git", "add", f], check=False)
 
     result = subprocess.run(["git", "diff", "--cached", "--quiet"], capture_output=True)
