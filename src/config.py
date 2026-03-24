@@ -74,12 +74,15 @@ TRACKS = [
             "efficient cot", "process supervision", "outcome reward",
             "reasoning compression", "latent reasoning", "dynamic reasoning",
             "deliberation budget", "compute-aware reasoning",
+            "inference-time scaling", "test-time compute", "test-time scaling",
+            "inference-time compute", "scaling compute at inference",
         ],
         "awesome_repos": [
             "TsinghuaC3I/Awesome-RL-for-LRMs",
             "opendilab/awesome-RLHF",
             "Eclipsess/Awesome-Efficient-Reasoning-LLMs",
             "Junting-Lu/Awesome-LLM-Reasoning-Techniques",
+            "ThreeSR/Awesome-Inference-Time-Scaling",
         ],
     },
     {
@@ -116,6 +119,23 @@ TRACKS = [
             "HuangOwen/Awesome-LLM-Compression",
             "Xnhyacinth/Awesome-LLM-Long-Context-Modeling",
             "horseee/Awesome-Efficient-LLM",
+        ],
+    },
+    {
+        "name": "Diffusion Language Models",
+        "min_yymm": 2506,
+        "positive_keywords": [
+            "diffusion language model", "discrete diffusion",
+            "masked diffusion", "continuous diffusion language",
+            "flow matching language", "score-based language",
+            "non-autoregressive generation", "parallel decoding diffusion",
+            "denoising language model", "diffusion transformer text",
+            "text diffusion", "language diffusion",
+            "efficient diffusion llm", "diffusion lm",
+        ],
+        "awesome_repos": [
+            "FelixMessi/Awesome-Efficient-dLLMs",
+            "VILA-Lab/Awesome-DLMs",
         ],
     },
 ]

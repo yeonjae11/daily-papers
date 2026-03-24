@@ -16,8 +16,8 @@ TOTAL_PAPERS = NUM_FRESH + NUM_TRACK
 
 
 def _get_track_index(date: datetime.date) -> int:
-    """Round-robin track selection: day_of_year % 5."""
-    return date.timetuple().tm_yday % 5
+    """Round-robin track selection: day_of_year % num_tracks."""
+    return date.timetuple().tm_yday % len(config.TRACKS)
 
 
 def _select_track_paper(
@@ -34,8 +34,8 @@ def _select_track_paper(
         tried_tracks = set()
 
     tracks = config.TRACKS
-    # Try up to 5 tracks (starting from track_index, wrapping around)
-    for offset in range(5):
+    # Try all tracks (starting from track_index, wrapping around)
+    for offset in range(len(tracks)):
         idx = (track_index + offset) % 5
         if idx in tried_tracks:
             continue

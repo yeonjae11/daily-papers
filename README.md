@@ -11,6 +11,7 @@ AI/LLM 관련 논문을 매일 자동으로 검색하고 한국어로 깊이 있
 | 3 | RL for LLMs / Reasoning | reasoning RL, process reward, CoT efficiency, adaptive compute |
 | 4 | Agents | tool use, multi-agent, planning, browser/computer-use, evaluation |
 | 5 | Efficient LLM / Inference / Long Context | speculative decoding, KV cache, quantization, long context, sparsity |
+| 6 | Diffusion Language Models | discrete/continuous diffusion LM, flow matching, non-autoregressive generation |
 
 ## 🏢 모니터링 기관 (Fresh 논문 필터)
 
