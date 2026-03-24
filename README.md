@@ -18,7 +18,7 @@ OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance,
 
 ## ⚙️ 운영 방식
 
-- **매일 2편**: Fresh arXiv 1편 (14일 이내) + Track Pool 1편 (round-robin)
+- **매일 3편**: Fresh 2편 (주요 기관 논문 우선) + Track Pool 1편 (round-robin)
 - **분석 형식**: Problem / Background / Methodology / Evaluation / Key Intuition
 - **Slack 전송**: KST 08:00 자동 전송 (채널 또는 DM)
 - **중복 방지**: 2-layer dedup (fresh_db + archive_db)
@@ -214,6 +214,7 @@ daily-ai-llm-papers/
 | 날짜 | 제목 | 링크 |
 |------|------|------|
 | 2026-03-24 | DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching | [arXiv](https://arxiv.org/abs/2602.06039) |
+| 2026-03-24 | RuleSmith: Multi-Agent LLMs for Automated Game Balancing | [arXiv](https://arxiv.org/abs/2602.06232) |
 
 ## 📚 브리핑 아카이브
 

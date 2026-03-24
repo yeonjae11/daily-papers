@@ -4,5 +4,19 @@
     "track": "ML Systems",
     "score": 14.0,
     "date": "2026-03-24"
+  },
+  "2603.22212": {
+    "title": "Omni-WorldBench: Towards a Comprehensive Interaction-Centric Evaluation for World Models",
+    "track": "LLM Post-training",
+    "org": "alibaba",
+    "score": 70.0,
+    "date": "2026-03-24"
+  },
+  "2603.21872": {
+    "title": "Manifold-Aware Exploration for Reinforcement Learning in Video Generation",
+    "track": "LLM Post-training",
+    "org": "tencent",
+    "score": 46.0,
+    "date": "2026-03-24"
   }
 }
