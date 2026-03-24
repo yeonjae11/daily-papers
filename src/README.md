@@ -29,10 +29,8 @@ OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance,
 
 | 날짜 | 제목 | 링크 |
 |------|------|------|
-| 2026-03-24 | [Pool] 2602.06232 | [arXiv](https://arxiv.org/abs/2602.06232) |
-| 2026-03-23 | [Pool] 2602.06039 | [arXiv](https://arxiv.org/abs/2602.06039) |
+| 2026-03-24 | [Pool] 2602.06039 | [arXiv](https://arxiv.org/abs/2602.06039) |
 
 ## 📚 브리핑 아카이브
 
 - [2026-03-24](./2026/03/2026-03-24.md)
-- [2026-03-23](./2026/03/2026-03-23.md)
