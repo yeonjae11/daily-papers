@@ -2,6 +2,9 @@
 # Daily AI/LLM Paper Briefing runner
 set -euo pipefail
 
+# Ensure claude CLI is in PATH (cron has minimal PATH)
+export PATH="$HOME/.local/bin:$PATH"
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
