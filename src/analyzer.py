@@ -14,7 +14,7 @@ ARXIV_NS = {
     "arxiv": "http://arxiv.org/schemas/atom",
 }
 
-MAX_HTML_TEXT_CHARS = 50000
+MAX_HTML_TEXT_CHARS = 40000
 
 
 def fetch_paper_metadata(arxiv_id: str) -> dict:
@@ -170,7 +170,7 @@ def _analyze_via_cli(prompt: str) -> str:
         )
 
     result = subprocess.run(
-        [claude_path, "-p", "-", "--output-format", "text"],
+        [claude_path, "-p", "-", "--output-format", "text", "--allowedTools", ""],
         input=prompt,
         capture_output=True,
         text=True,
@@ -221,7 +221,10 @@ def analyze_paper(paper: dict) -> str:
             return _analyze_via_cli(p)
 
     try:
-        return _run_analysis(prompt)
+        result = _run_analysis(prompt)
+        if len(result) < 100:
+            raise RuntimeError(f"Analysis too short ({len(result)} chars), likely failed")
+        return result
     except Exception as e:
         print(f"  [WARN] Analysis failed with full text: {e}")
         # Fallback: retry with abstract only (no full_text)
