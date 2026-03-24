@@ -143,6 +143,12 @@ crontab -e
 
 ## 📊 최근 논문 (트랙별)
 
+### ML Systems
+
+| 날짜 | 제목 | 링크 |
+|------|------|------|
+| 2026-03-25 | Enhancing Large-Scale AI Training Efficiency: The C4 Solution for Real-Time Anomaly Detection and Communication Optimization | [arXiv](https://arxiv.org/abs/2406.04594) |
+
 ### Agents
 
 | 날짜 | 제목 | 링크 |
@@ -153,4 +159,5 @@ crontab -e
 
 ## 📚 브리핑 아카이브
 
+- [2026-03-25](./src/2026/03/2026-03-25.md)
 - [2026-03-24](./src/2026/03/2026-03-24.md)

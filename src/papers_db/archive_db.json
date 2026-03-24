@@ -13,5 +13,10 @@
     "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
     "track": "Agents",
     "date_briefed": "2026-03-24"
+  },
+  "2406.04594": {
+    "title": "Enhancing Large-Scale AI Training Efficiency: The C4 Solution for Real-Time Anomaly Detection and Communication Optimization",
+    "track": "ML Systems",
+    "date_briefed": "2026-03-25"
   }
 }
