@@ -206,3 +206,15 @@ daily-ai-llm-papers/
 ```
 
 <!-- AUTO-GENERATED BELOW -->
+
+## 📊 최근 논문 (트랙별)
+
+### Agents
+
+| 날짜 | 제목 | 링크 |
+|------|------|------|
+| 2026-03-24 | DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching | [arXiv](https://arxiv.org/abs/2602.06039) |
+
+## 📚 브리핑 아카이브
+
+- [2026-03-24](./src/2026/03/2026-03-24.md)

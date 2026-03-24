@@ -1,1 +1,8 @@
-{}
+{
+  "2603.14371": {
+    "title": "OxyGen: Unified KV Cache Management for Vision-Language-Action Models under Multi-Task Parallelism",
+    "track": "ML Systems",
+    "score": 14.0,
+    "date": "2026-03-24"
+  }
+}
