@@ -79,7 +79,9 @@ def send_briefing(date_str: str, papers: list[dict], analyses: list[str]):
     for i, p in enumerate(papers, 1):
         track = p.get("track", "Other")
         title = p.get("title", p.get("id", "Unknown"))
-        lines.append(f"{i}. {title}\n   [{track}]")
+        org = p.get("org", "")
+        org_label = f" | 🏢 {org}" if org else ""
+        lines.append(f"{i}. {title}\n   [{track}]{org_label}")
     header = "\n".join(lines)
 
     try:
@@ -100,7 +102,9 @@ def send_briefing(date_str: str, papers: list[dict], analyses: list[str]):
         title = paper.get("title", paper.get("id", "Unknown"))
         track = paper.get("track", "Other")
         url = paper.get("url", "")
-        prefix = f"📄 *{i+1}. {title}*\n🔗 {url}\n🏷️ {track}\n\n"
+        org = paper.get("org", "")
+        org_line = f"\n🏢 {org}" if org else ""
+        prefix = f"📄 *{i+1}. {title}*\n🔗 {url}\n🏷️ {track}{org_line}\n\n"
         full_msg = prefix + analysis
 
         chunks = _split_message(full_msg)

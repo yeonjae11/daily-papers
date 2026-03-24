@@ -1,4 +1,4 @@
-"""Paper selection: 1 fresh arXiv + 1 track paper (round-robin), with fallback."""
+"""Paper selection: 2 fresh (institution) + 1 track paper (round-robin), with fallback."""
 
 from __future__ import annotations
 
@@ -9,6 +9,10 @@ from typing import Optional
 
 from src import config
 from src.dedup import FreshDB, ArchiveDB
+
+NUM_FRESH = 2
+NUM_TRACK = 1
+TOTAL_PAPERS = NUM_FRESH + NUM_TRACK
 
 
 def _get_track_index(date: datetime.date) -> int:
@@ -73,62 +77,79 @@ def select_daily_papers(
     track_pool: dict,
     fresh_papers: list[dict],
 ) -> list[dict]:
-    """Select exactly 2 papers for today's briefing.
+    """Select papers for today's briefing: up to 2 fresh + 1 track.
 
     Args:
         date: Today's date
         fresh_db: 30-day rolling dedup DB
         archive_db: Permanent dedup DB
         track_pool: Awesome repo paper pool
-        fresh_papers: Pre-scored fresh papers from arXiv (already filtered/deduped)
+        fresh_papers: Pre-scored fresh papers (already filtered/deduped)
 
     Returns:
-        List of exactly 2 paper dicts.
+        List of paper dicts (target: 3, minimum: 2).
 
     Raises:
-        RuntimeError if unable to select 2 papers.
+        RuntimeError if unable to select at least 2 papers.
     """
     selected = []
+    selected_ids = set()
     track_index = _get_track_index(date)
     tried_tracks = set()
 
-    # 1. Fresh paper: top scored arXiv paper
-    if fresh_papers:
-        paper = fresh_papers[0]
+    # 1. Fresh papers: top 2 scored papers (institution papers prioritized by score)
+    for paper in fresh_papers[:NUM_FRESH]:
         paper["source"] = "arxiv_fresh"
         selected.append(paper)
-        # Record in fresh_db
+        selected_ids.add(paper["id"])
         fresh_db.add(paper["id"], {
             "title": paper["title"],
             "track": paper.get("track", "Other"),
+            "org": paper.get("org", ""),
             "score": paper.get("score", 0),
             "date": date.isoformat(),
         })
 
     # 2. Track paper: round-robin from pool
     track_paper = _select_track_paper(track_index, archive_db, track_pool, tried_tracks)
-    if track_paper:
+    if track_paper and track_paper["id"] not in selected_ids:
         selected.append(track_paper)
+        selected_ids.add(track_paper["id"])
         archive_db.add(track_paper["id"], {
             "title": track_paper["title"],
             "track": track_paper["track"],
             "date_briefed": date.isoformat(),
         })
 
-    # 3. Fallback: if we don't have 2 papers yet, fill from track pool
+    # 3. Fallback: fill remaining slots from track pool or fresh papers
     while len(selected) < 2:
-        # Try next track (different from already used tracks)
-        next_idx = (track_index + len(tried_tracks)) % 5
-        fallback = _select_track_paper(next_idx, archive_db, track_pool, tried_tracks)
-        if fallback:
-            selected.append(fallback)
-            archive_db.add(fallback["id"], {
-                "title": fallback["title"],
-                "track": fallback["track"],
-                "date_briefed": date.isoformat(),
-            })
+        # Try more fresh papers
+        for paper in fresh_papers:
+            if paper["id"] not in selected_ids:
+                paper["source"] = "arxiv_fresh"
+                selected.append(paper)
+                selected_ids.add(paper["id"])
+                fresh_db.add(paper["id"], {
+                    "title": paper["title"],
+                    "track": paper.get("track", "Other"),
+                    "score": paper.get("score", 0),
+                    "date": date.isoformat(),
+                })
+                break
         else:
-            break
+            # Try more track papers
+            next_idx = (track_index + len(tried_tracks)) % 5
+            fallback = _select_track_paper(next_idx, archive_db, track_pool, tried_tracks)
+            if fallback and fallback["id"] not in selected_ids:
+                selected.append(fallback)
+                selected_ids.add(fallback["id"])
+                archive_db.add(fallback["id"], {
+                    "title": fallback["title"],
+                    "track": fallback["track"],
+                    "date_briefed": date.isoformat(),
+                })
+            else:
+                break
 
     if len(selected) < 2:
         raise RuntimeError(

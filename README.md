@@ -12,7 +12,7 @@ AI/LLM 관련 논문을 매일 자동으로 검색하고 한국어로 깊이 있
 | 4 | Agents | tool use, multi-agent, planning, browser/computer-use, evaluation |
 | 5 | Efficient LLM / Inference / Long Context | speculative decoding, KV cache, quantization, long context, sparsity |
 
-## 🏢 모니터링 기관 (가중치 부여)
+## 🏢 모니터링 기관 (Fresh 논문 필터)
 
 OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance, Microsoft, DeepSeek, Alibaba, Tencent, UC Berkeley, Stanford, MIT, CMU
 
@@ -23,6 +23,7 @@ OpenAI, Anthropic, Meta, NVIDIA, Together AI, Google DeepMind, Apple, ByteDance,
 - **Slack 전송**: KST 08:00 자동 전송 (채널 또는 DM)
 - **중복 방지**: 2-layer dedup (fresh_db + archive_db)
 - **Track Pool**: 20개 Awesome repo + DBLP 컨퍼런스(MLSys/ASPLOS/MICRO)에서 자동 크롤링
+- **Fresh 소스**: HuggingFace Daily Papers (기관 매칭 → Claude 트랙 분류) + arXiv 키워드 검색 (보조)
 - **분석 소스**: arXiv HTML 본문 전체 + Figure 1 이미지 추출
 
 ---
@@ -135,74 +136,6 @@ crontab -e
 
 ```cron
 0 8 * * * cd /home/minseokim/daily-ai-llm-papers && bash run.sh
-```
-
-macOS에서 cron이 안 되는 경우 **launchd** 사용:
-
-```bash
-# ~/Library/LaunchAgents/com.daily-papers.plist 생성
-cat > ~/Library/LaunchAgents/com.daily-papers.plist << 'EOF'
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.daily-papers</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/bin/bash</string>
-        <string>/Users/yourname/daily-ai-llm-papers/run.sh</string>
-    </array>
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>8</integer>
-        <key>Minute</key>
-        <integer>0</integer>
-    </dict>
-    <key>WorkingDirectory</key>
-    <string>/Users/yourname/daily-ai-llm-papers</string>
-    <key>EnvironmentVariables</key>
-    <dict>
-        <key>PATH</key>
-        <string>/usr/local/bin:/usr/bin:/bin</string>
-    </dict>
-</dict>
-</plist>
-EOF
-
-# 등록
-launchctl load ~/Library/LaunchAgents/com.daily-papers.plist
-```
-
----
-
-## 📁 프로젝트 구조
-
-```
-daily-ai-llm-papers/
-├── daily_briefing.py      # 메인 오케스트레이터
-├── run.sh                 # Cron 실행 스크립트
-├── requirements.txt       # Python 의존성
-├── .env.example           # 환경 변수 템플릿
-├── src/                   # 핵심 모듈
-│   ├── config.py          #   트랙/키워드/기관 설정
-│   ├── arxiv_search.py    #   arXiv API 검색
-│   ├── scoring.py         #   논문 점수 산정
-│   ├── crawler.py         #   Awesome repo 크롤러
-│   ├── dedup.py           #   2-layer 중복 방지
-│   ├── selector.py        #   일일 논문 선정 (1 fresh + 1 track)
-│   ├── analyzer.py        #   Claude 5항목 깊이 분석
-│   ├── slack_sender.py    #   Slack 전송 (채널/DM + Figure 업로드)
-│   └── github_archive.py  #   마크다운 저장 + README + Git push
-├── tests/                 # 유닛 테스트
-│   ├── test_scoring.py    #   스코어링 테스트
-│   └── test_selector.py   #   선정 로직 테스트
-├── papers_db/             # 데이터
-│   ├── fresh_db.json      #   30일 rolling dedup DB
-│   ├── archive_db.json    #   영구 dedup DB
-│   └── track_pool.json    #   Awesome repo 논문 풀
-└── YYYY/MM/YYYY-MM-DD.md  # 일일 브리핑 아카이브
 ```
 
 <!-- AUTO-GENERATED BELOW -->
