@@ -46,5 +46,19 @@
     "org": "",
     "score": 10.0,
     "date": "2026-03-25"
+  },
+  "2603.22528": {
+    "title": "GraphRAG for Engineering Diagrams: ChatP&ID Enables LLM Interaction with P&IDs",
+    "track": "Agents",
+    "org": "",
+    "score": 10.0,
+    "date": "2026-03-26"
+  },
+  "2603.13605": {
+    "title": "Orla: A Library for Serving LLM-Based Multi-Agent Systems",
+    "track": "ML Systems",
+    "org": "",
+    "score": 9.0,
+    "date": "2026-03-26"
   }
 }
