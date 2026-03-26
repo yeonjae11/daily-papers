@@ -155,6 +155,12 @@ crontab -e
 |------|------|------|
 | 2026-03-26 | [Pool] 2502.21321 | [arXiv](https://arxiv.org/abs/2502.21321) |
 
+### RL for LLMs / Reasoning
+
+| 날짜 | 제목 | 링크 |
+|------|------|------|
+| 2026-03-27 | A Survey of Reinforcement Learning for Large Reasoning Models | [arXiv](https://arxiv.org/abs/2509.08827) |
+
 ### Agents
 
 | 날짜 | 제목 | 링크 |
@@ -165,6 +171,7 @@ crontab -e
 
 ## 📚 브리핑 아카이브
 
+- [2026-03-27](./src/2026/03/2026-03-27.md)
 - [2026-03-26](./src/2026/03/2026-03-26.md)
 - [2026-03-25](./src/2026/03/2026-03-25.md)
 - [2026-03-24](./src/2026/03/2026-03-24.md)
