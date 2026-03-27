@@ -165,12 +165,14 @@ crontab -e
 
 | 날짜 | 제목 | 링크 |
 |------|------|------|
+| 2026-03-28 | AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions | [arXiv](https://arxiv.org/abs/2602.06008) |
 | 2026-03-24 | DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching | [arXiv](https://arxiv.org/abs/2602.06039) |
 | 2026-03-24 | RuleSmith: Multi-Agent LLMs for Automated Game Balancing | [arXiv](https://arxiv.org/abs/2602.06232) |
 | 2026-03-24 | CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction | [arXiv](https://arxiv.org/abs/2602.06038) |
 
 ## 📚 브리핑 아카이브
 
+- [2026-03-28](./src/2026/03/2026-03-28.md)
 - [2026-03-27](./src/2026/03/2026-03-27.md)
 - [2026-03-26](./src/2026/03/2026-03-26.md)
 - [2026-03-25](./src/2026/03/2026-03-25.md)

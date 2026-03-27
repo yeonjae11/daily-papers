@@ -28,5 +28,10 @@
     "title": "A Survey of Reinforcement Learning for Large Reasoning Models",
     "track": "RL for LLMs / Reasoning",
     "date_briefed": "2026-03-27"
+  },
+  "2602.06008": {
+    "title": "AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions",
+    "track": "Agents",
+    "date_briefed": "2026-03-28"
   }
 }

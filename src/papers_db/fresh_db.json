@@ -74,5 +74,19 @@
     "org": "alibaba",
     "score": 25.0,
     "date": "2026-03-27"
+  },
+  "2603.22918": {
+    "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+    "track": "LLM Post-training",
+    "org": "",
+    "score": 9.0,
+    "date": "2026-03-28"
+  },
+  "2603.22075": {
+    "title": "Autoregressive vs. Masked Diffusion Language Models: A Controlled Comparison",
+    "track": "Diffusion Language Models",
+    "org": "",
+    "score": 9.0,
+    "date": "2026-03-28"
   }
 }
