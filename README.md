@@ -147,6 +147,7 @@ crontab -e
 
 | 날짜 | 제목 | 링크 |
 |------|------|------|
+| 2026-03-29 | [Pool] 2407.21783 | [arXiv](https://arxiv.org/abs/2407.21783) |
 | 2026-03-25 | Enhancing Large-Scale AI Training Efficiency: The C4 Solution for Real-Time Anomaly Detection and Communication Optimization | [arXiv](https://arxiv.org/abs/2406.04594) |
 
 ### LLM Post-training
@@ -170,8 +171,15 @@ crontab -e
 | 2026-03-24 | RuleSmith: Multi-Agent LLMs for Automated Game Balancing | [arXiv](https://arxiv.org/abs/2602.06232) |
 | 2026-03-24 | CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction | [arXiv](https://arxiv.org/abs/2602.06038) |
 
+### Efficient LLM / Inference / Long Context
+
+| 날짜 | 제목 | 링크 |
+|------|------|------|
+| 2026-03-29 | [Pool] 2501.12948 | [arXiv](https://arxiv.org/abs/2501.12948) |
+
 ## 📚 브리핑 아카이브
 
+- [2026-03-29](./src/2026/03/2026-03-29.md)
 - [2026-03-28](./src/2026/03/2026-03-28.md)
 - [2026-03-27](./src/2026/03/2026-03-27.md)
 - [2026-03-26](./src/2026/03/2026-03-26.md)
