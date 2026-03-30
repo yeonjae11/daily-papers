@@ -1,5 +1,5 @@
 {
-  "last_crawled": "2026-03-24T02:12:49.158752",
+  "last_crawled": "2026-03-31T08:00:23.029778",
   "ML Systems": [
     {
       "arxiv_id": "2406.04594",
@@ -3448,6 +3448,230 @@
     {
       "arxiv_id": "2510.07880",
       "source_repo": "Eclipsess/Awesome-Efficient-Reasoning-LLMs"
+    },
+    {
+      "arxiv_id": "2510.03574",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2506.07976",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.23621",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.20633",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.19621",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.17618",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.11730",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.05408",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2505.02686",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.10449",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.10337",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.09130",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.04718",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.01005",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.00869",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2504.00294",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.24235",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.19385",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.18942",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.13444",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.12271",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.10291",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.07154",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.02878",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.21321",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.20339",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.20395",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2503.00031",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.18418",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.17651",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.17419",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.14382",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.12215",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.12130",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.12118",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.09955",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.07202",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.07191",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.04728",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.05171",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.04128",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.02339",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.02584",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.01100",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.01839",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2502.01208",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.18841",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.19306",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.18427",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.14723",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.09732",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.06848",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.06458",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.04519",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.04682",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
+    },
+    {
+      "arxiv_id": "2501.02497",
+      "source_repo": "ThreeSR/Awesome-Inference-Time-Scaling"
     }
   ],
   "Agents": [
@@ -5745,6 +5969,10 @@
     },
     {
       "arxiv_id": "2511.20639",
+      "source_repo": "kyegomez/awesome-multi-agent-papers"
+    },
+    {
+      "arxiv_id": "2603.21597",
       "source_repo": "kyegomez/awesome-multi-agent-papers"
     }
   ],
@@ -9084,6 +9312,1024 @@
     {
       "arxiv_id": "2506.07621",
       "source_repo": "horseee/Awesome-Efficient-LLM"
+    },
+    {
+      "arxiv_id": "2603.22120",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    },
+    {
+      "arxiv_id": "2603.21257",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    },
+    {
+      "arxiv_id": "2603.21493",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    },
+    {
+      "arxiv_id": "2603.20432",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    },
+    {
+      "arxiv_id": "2603.22918",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    },
+    {
+      "arxiv_id": "2603.21957",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    },
+    {
+      "arxiv_id": "2603.20422",
+      "source_repo": "Xnhyacinth/Awesome-LLM-Long-Context-Modeling"
+    }
+  ],
+  "Diffusion Language Models": [
+    {
+      "arxiv_id": "2508.15487",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.24007",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.26328",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.06303",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.15745",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.14067",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.06776",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2601.13599",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.24389",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.22852",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2602.15014",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2603.15803",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2506.10848",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.00707",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2506.00413",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2508.19982",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.07081",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.00294",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.18165",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.02892",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.07173",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.16229",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2601.20339",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2602.00150",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2602.22868",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2602.18176",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2603.15340",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2603.22248",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.26488",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.19962",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.22738",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.25188",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.09106",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2601.07568",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2506.06295",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.23094",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2508.02558",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.14973",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.09309",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2508.14896",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.03274",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2506.00290",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2601.02236",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.18085",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.04147",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2511.21759",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.02358",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.15176",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2601.19278",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.01025",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.24605",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.03506",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2506.14429",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2509.26432",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.03680",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.10481",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2602.22661",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.18480",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.04767",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.22234",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2603.06743",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2603.22075",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.08666",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.17077",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.14068",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2510.06308",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2511.12280",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2511.15098",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2512.14008",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2602.02927",
+      "source_repo": "FelixMessi/Awesome-Efficient-dLLMs"
+    },
+    {
+      "arxiv_id": "2508.10875",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.03276",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.08712",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.13759",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2603.02333",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2603.01331",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.23225",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.17664",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.14209",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.12262",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.09555",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.08404",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.08048",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.05859",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.02133",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.02112",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.01362",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.22954",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.22947",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.22035",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.22031",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.19657",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.20125",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.15593",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.15892",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.14758",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.13228",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.12376",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.11342",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.07351",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.07347",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.22630",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.20604",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.13586",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.22146",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.08923",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.03280",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.00606",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.27469",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.26200",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.23606",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.17206",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.15244",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.15731",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.13117",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.09885",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.09544",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.08632",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.04071",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.04146",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.02902",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.01329",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.03289",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.24296",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.25035",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.24014",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.23146",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.20624",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.13866",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.05056",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.01142",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.12398",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.10736",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.09138",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.02193",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.19227",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.11097",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.07586",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.08018",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.04341",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.07050",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.10892",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.01928",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2603.02547",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.16813",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.22510",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.04573",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.03206",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.21170",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.12469",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.17868",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.15713",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.09611",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.01718",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.19871",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.25681",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.19244",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.06932",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.06462",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.02178",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.15165",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.09675",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.03759",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.19269",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.23658",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.21473",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.11683",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.09541",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.04019",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.01544",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.23286",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.10396",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.06949",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.06040",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.19529",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.13148",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.08838",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.20639",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2603.04893",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2603.02760",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.23792",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.22871",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.12153",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.11133",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.10953",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.09501",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.07546",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.06953",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.06412",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.06161",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.06036",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.05992",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.05000",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.04399",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.02159",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.01842",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.22629",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.23182",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.22527",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.21647",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.17917",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.12247",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.03199",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.02076",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.24143",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.22737",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.21336",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.20573",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.12168",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2512.02044",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.21103",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.21961",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.14961",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.11052",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.13870",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.06133",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.05090",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.05040",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.25604",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.23924",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.23653",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.15188",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.14148",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.13021",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.14090",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.10111",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.09192",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.00819",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.18578",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.08390",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.04504",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.19037",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.12528",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2602.11715",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2601.12979",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2511.06254",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.01028",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2510.01274",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.24975",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2509.20109",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.10995",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2508.01473",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2507.19081",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.17298",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.13579",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.21557",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
+    },
+    {
+      "arxiv_id": "2506.08293",
+      "source_repo": "VILA-Lab/Awesome-DLMs"
     }
   ]
 }
