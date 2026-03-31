@@ -148,6 +148,7 @@ crontab -e
 | 날짜 | 제목 | 링크 |
 |------|------|------|
 | 2026-03-31 | Hydraulis: Balancing Large Transformer Model Training via Co-designing Parallel Strategies and Data Assignment | [arXiv](https://arxiv.org/abs/2412.07894) |
+| 2026-03-31 | Improving training time and GPU utilization in geo-distributed language model training | [arXiv](https://arxiv.org/abs/2411.14458) |
 | 2026-03-30 | [Pool] 2410.21680 | [arXiv](https://arxiv.org/abs/2410.21680) |
 | 2026-03-29 | [Pool] 2407.21783 | [arXiv](https://arxiv.org/abs/2407.21783) |
 | 2026-03-25 | Enhancing Large-Scale AI Training Efficiency: The C4 Solution for Real-Time Anomaly Detection and Communication Optimization | [arXiv](https://arxiv.org/abs/2406.04594) |
@@ -156,6 +157,7 @@ crontab -e
 
 | 날짜 | 제목 | 링크 |
 |------|------|------|
+| 2026-03-31 | From System 1 to System 2: A Survey of Reasoning Large Language Models | [arXiv](https://arxiv.org/abs/2502.17419) |
 | 2026-03-30 | [Pool] 2503.06072 | [arXiv](https://arxiv.org/abs/2503.06072) |
 | 2026-03-26 | [Pool] 2502.21321 | [arXiv](https://arxiv.org/abs/2502.21321) |
 
